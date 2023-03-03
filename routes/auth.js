@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const {authController} = require("../controllers");
+const {checkToken} = require("../middlewares");
 
-router.post("/", authController.createToken);
+router.post("/create-token", authController.createToken);
 
 module.exports = router;
