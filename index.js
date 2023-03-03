@@ -1,0 +1,13 @@
+require("dotenv").config();
+const {app} = require("./app.js");
+
+const port = process.env.PORT || 8000;
+app.listen(port, () => console.log(`Server Started at ${port}`));
+
+
+/*
+  -- CREATE JWT_SECRET_KEY --
+
+  1. open node terminal
+  2. require("crypto").randomBytes(64).toString("hex")
+*/
