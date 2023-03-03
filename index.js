@@ -1,7 +1,8 @@
 require("dotenv").config();
 const {app} = require("./app.js");
-const {testRouter} = require("./routes");
+const {testRouter, authRouter} = require("./routes");
 
+app.use("/auth", authRouter);
 app.use("/test", testRouter);
 
 const port = process.env.PORT || 8000;

@@ -1,3 +1,4 @@
 const testController = require("./test.js");
+const authController = require("./auth.js");
 
-module.exports = {testController};
+module.exports = {testController, authController};

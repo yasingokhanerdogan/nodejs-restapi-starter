@@ -35,6 +35,7 @@ module.exports = {
         try {
             const {text} = req.body;
             const createData = await testModel.create({text});
+            console.log(req.decoded);
 
             if (!createData)
                 return res.status(400).json({message: "Couldn't Create Text.", data: null})
