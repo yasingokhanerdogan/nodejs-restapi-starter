@@ -1,5 +1,8 @@
 require("dotenv").config();
 const {app} = require("./app.js");
+const {testRouter} = require("./routes");
+
+app.use("/test", testRouter);
 
 const port = process.env.PORT || 8000;
 app.listen(port, () => console.log(`Server Started at ${port}`));
